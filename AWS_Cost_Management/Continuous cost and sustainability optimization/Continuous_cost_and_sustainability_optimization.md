@@ -58,11 +58,11 @@ EBS또한 DLM을 제공하며 이를 통해 요구사항에 맞는 스냅샷 관
 ### 실습
 dev 환경에 대해서만 실습을 진행해보자.
 - 콘솔환경<br>
-![img.png](img/img-5.png)
+![img.png](img/img-5.png)<br>
 Lifecycle Manager(활성)탭에서 새로운 정책 생성 후 다음과 같이 만들어보자, IAM은 기본역할을 해도 AwsDataLifeCycleManagerPolicy와 같은 정책이 넘어오는 것으로 보인다. 기본역할을 사용하자.<br><br>
-![img.png](img/img-6.png)
+![img.png](img/img-6.png)<br>
 일정이름은 본인이 편한 이름으로, 빈도는 스냅샷을 생성할 빈도인데 요구사항인 1시간을 설정하자. 여러 표현식들이 있지만 실습에서는 cron 표현식을 사용한다. 보존유형은 스냅샷을 얼마나 보존할지에 대한것으로 한시간 단위로 1개가 생성되니 6개까지만 유지하면 6시간 단위로 스냅샷을 유지할 수 있다.<br><br>
-![img.png](img/img-7.png)
+![img.png](img/img-7.png)<br>
 DLM이 제대로 생성됐는지 확인하고 스냅샷이 생성되는지 확인하자.<br><br>
 
 prod환경도 같은 절차도 정책을 생성하여 각 환경에 대한 관리 정책을 확인할 수 있도록 하자.
